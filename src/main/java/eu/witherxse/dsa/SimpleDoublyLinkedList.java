@@ -4,7 +4,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
- * Simple doubly linked list implementation, may also be used as a queue.
+ * Simple doubly linked list implementation, may also be used as a FIFO queue.
  * @param <T>
  */
 public class SimpleDoublyLinkedList<T> implements SimpleList<T>, SimpleQueue<T> {
@@ -62,8 +62,8 @@ public class SimpleDoublyLinkedList<T> implements SimpleList<T>, SimpleQueue<T> 
         if (Objects.nonNull(current)) {
             result = true;
             removeNodeReferences(current);
+            length--;
         }
-        length--;
         return result;
     }
 
