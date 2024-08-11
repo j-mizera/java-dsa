@@ -77,4 +77,11 @@ public class TreeTests {
                 : "Expected [2, 4, 5, 6, 7, 3, 1] but got "
                 + traverseList;
     }
+
+    @Test
+    public void testInTraverseEmpty() {
+        BinaryNode<Integer> root = null;
+        List<Integer> traverseList = TreeAlgorithms.inVisitTraverse(root);
+        assert traverseList.isEmpty();
+    }
 }
