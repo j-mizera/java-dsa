@@ -11,9 +11,7 @@ public class AlgorithmsTest {
         int[] sorted = {1, 2, 3, 4, 5};
         for (SortAlgorithms.SortAlgorithm sortAlgorithm : SortAlgorithms.allAlgorithms()) {
             sortAlgorithm.sort(unsorted);
-            for (int i = 0; i < unsorted.length; i++) {
-                assert Objects.deepEquals(sorted[i], unsorted[i]);
-            }
+            assert Objects.deepEquals(sorted, unsorted);
             unsorted = new int[]{5, 3, 1, 2, 4};
         }
     }
