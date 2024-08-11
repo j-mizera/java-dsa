@@ -2,13 +2,13 @@ name: Default Workflow
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   pull_request_target:
     branches:
-      - master
+      - main
 
 jobs:
     build:
