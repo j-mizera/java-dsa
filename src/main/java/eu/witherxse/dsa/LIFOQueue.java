@@ -1,7 +1,6 @@
 package eu.witherxse.dsa;
 
 import java.util.Objects;
-import java.util.Optional;
 
 public class LIFOQueue<T> implements SimpleQueue<T> {
 
