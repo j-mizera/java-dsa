@@ -89,6 +89,29 @@ public class BinaryTree<T extends Comparable<T>> {
         return result;
     }
 
+    public boolean search(T value) {
+        boolean result = false;
+        if (Objects.nonNull(value) && Objects.nonNull(this.root)) {
+            result = search(this.root, value);
+        }
+        return result;
+    }
+
+    private boolean search(BinaryNode<T> searchPoint, T value) {
+        boolean result = false;
+        if (Objects.nonNull(searchPoint)) {
+            int comparison = searchPoint.getValue().compareTo(value);
+            if (comparison == 0) {
+                result = true;
+            } else if (comparison > 0) {
+                result = search(searchPoint.getLeft(), value);
+            } else {
+                result = search(searchPoint.getRight(), value);
+            }
+        }
+        return result;
+    }
+
     private BinaryNode<T> findSuccessor(BinaryNode<T> node) {
         BinaryNode<T> current = node.getRight();
         while (current != null && Objects.nonNull(current.getLeft())) {
