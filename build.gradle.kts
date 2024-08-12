@@ -1,5 +1,7 @@
 plugins {
     id("java")
+    id("checkstyle")
+    id("pmd")
 }
 
 group = "eu.witherxse.dsa"
@@ -16,5 +18,15 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-        //
+}
+
+tasks.register("codeQuality") {
+    dependsOn("checkstyleMain", "checkstyleTest", "pmdMain", "pmdTest")
+}
+
+checkstyle {
+    toolVersion = "10.17.0"
+    configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
+    isShowViolations = true
+    isIgnoreFailures = false
 }

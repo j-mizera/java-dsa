@@ -17,13 +17,13 @@ public interface SimpleQueue<T> {
      * Removes and returns element from the front of the queue.
      * @return
      */
-    Optional<T> dequeue();
+    T dequeue();
 
     /**
      * Returns element from the front of the queue without removing it.
      * @return
      */
-    Optional<T> peek();
+    T peek();
 
     /**
      * Returns true if queue is empty.

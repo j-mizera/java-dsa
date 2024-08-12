@@ -22,10 +22,10 @@ public class LIFOQueue<T> implements SimpleQueue<T> {
     }
 
     @Override
-    public Optional<T> dequeue() {
-        Optional<T> result = Optional.empty();
+    public T dequeue() {
+        T result = null;
         if (Objects.nonNull(this.head)) {
-            result = Optional.ofNullable(this.head.getValue());
+            result = this.head.getValue();
             this.head = this.head.getPrev();
             length--;
         }
@@ -33,10 +33,10 @@ public class LIFOQueue<T> implements SimpleQueue<T> {
     }
 
     @Override
-    public Optional<T> peek() {
-        Optional<T> result = Optional.empty();
+    public T peek() {
+        T result = null;
         if (Objects.nonNull(this.head)) {
-            result = Optional.ofNullable(this.head.getValue());
+            result = this.head.getValue();
         }
         return result;
     }
