@@ -4,10 +4,10 @@ import java.util.Objects;
 
 /**
  * Node of binary tree data structure.
- * @param <T>
+ *
+ * @param <T> Type of value stored in node.
  */
 public class BinaryNode<T> {
-
     private T value;
     private BinaryNode<T> left;
     private BinaryNode<T> right;

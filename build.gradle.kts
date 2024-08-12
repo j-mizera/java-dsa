@@ -27,6 +27,17 @@ tasks.register("codeQuality") {
 checkstyle {
     toolVersion = "10.17.0"
     configFile = file("${rootDir}/config/checkstyle/checkstyle.xml")
-    isShowViolations = true
-    isIgnoreFailures = false
+}
+
+tasks.withType<Checkstyle> {
+    /*doLast {
+        reports.forEach { report ->
+            val outputFile = report.outputLocation.asFile.orNull
+            val outputFileExists = outputFile?.exists() ?: false
+            val errorExists = outputFileExists && outputFile?.readText()?.contains("<error ") == true
+            if (errorExists) {
+                throw GradleException("There were checkstyle warnings! For more info check $outputFile")
+            }
+        }
+    }*/
 }
