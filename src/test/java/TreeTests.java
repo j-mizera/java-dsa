@@ -227,4 +227,74 @@ public class TreeTests {
                 : "Expected " + shouldContain + " but got "
                 + traverseList;
     }
+
+    @Test
+    public void testBinaryTreeDeleteRoot() {
+        BinaryTree<Integer> tree = new BinaryTree<>();
+
+        tree.insert(5);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(1);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(8);
+
+        tree.delete(5);
+
+        BinaryNode<Integer> root = tree.getRoot();
+        List<Integer> traverseList = TreeAlgorithms.inVisitTraverse(root);
+        List<Integer> shouldContain = List.of(1, 3, 4, 6, 7, 8);
+        assert traverseList.size() == 6;
+        //not the best method but for now it will do
+        assert shouldContain.equals(traverseList)
+                : "Expected " + shouldContain + " but got "
+                + traverseList;
+    }
+
+    @Test
+    public void testBinaryTreeDeleteNonExisting() {
+        BinaryTree<Integer> tree = new BinaryTree<>();
+
+        tree.insert(5);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(1);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(8);
+
+        tree.delete(10);
+
+        BinaryNode<Integer> root = tree.getRoot();
+        List<Integer> traverseList = TreeAlgorithms.inVisitTraverse(root);
+        List<Integer> shouldContain = List.of(1, 3, 4, 5, 6, 7, 8);
+        assert traverseList.size() == 7;
+        //not the best method but for now it will do
+        assert shouldContain.equals(traverseList)
+                : "Expected " + shouldContain + " but got "
+                + traverseList;
+    }
+
+    @Test
+    public void testBinaryTreeSearch() {
+        BinaryTree<Integer> tree = new BinaryTree<>();
+
+        tree.insert(5);
+        tree.insert(3);
+        tree.insert(7);
+        tree.insert(1);
+        tree.insert(4);
+        tree.insert(6);
+        tree.insert(8);
+
+        assert tree.search(5);
+        assert tree.search(3);
+        assert tree.search(7);
+        assert tree.search(1);
+        assert tree.search(4);
+        assert tree.search(6);
+        assert tree.search(8);
+        assert !tree.search(10);
+    }
 }
