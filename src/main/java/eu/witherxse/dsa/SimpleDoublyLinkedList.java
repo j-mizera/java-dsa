@@ -96,19 +96,20 @@ public class SimpleDoublyLinkedList<T> implements SimpleList<T>, SimpleQueue<T> 
     }
 
     @Override
-    public Optional<T> dequeue() {
-        Optional<T> result = peek();
-        if (result.isPresent()) {
+    public T dequeue() {
+        T result = null;
+        if (Objects.nonNull(this.head)) {
+            result = this.head.getValue();
             remove(0);
         }
         return result;
     }
 
     @Override
-    public Optional<T> peek() {
-        Optional<T> result = Optional.empty();
+    public T peek() {
+        T result = null;
         if (!isEmpty() && Objects.nonNull(this.head)) {
-            result = Optional.ofNullable(this.head.getValue());
+            result = this.head.getValue();
         }
         return result;
     }

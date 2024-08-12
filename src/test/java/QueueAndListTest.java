@@ -3,6 +3,8 @@ import eu.witherxse.dsa.SimpleDoublyLinkedList;
 import eu.witherxse.dsa.SimpleQueue;
 import org.junit.jupiter.api.Test;
 
+import java.util.Objects;
+
 public class QueueAndListTest {
 
     @Test
@@ -11,10 +13,10 @@ public class QueueAndListTest {
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
-        assert queue.dequeue().get() == 1;
-        assert queue.dequeue().get() == 2;
-        assert queue.dequeue().get() == 3;
-        assert queue.peek().isEmpty();
+        assert queue.dequeue() == 1;
+        assert queue.dequeue() == 2;
+        assert queue.dequeue() == 3;
+        assert Objects.isNull(queue.peek());
         assert queue.isEmpty();
     }
 
@@ -24,10 +26,10 @@ public class QueueAndListTest {
         queue.enqueue(1);
         queue.enqueue(2);
         queue.enqueue(3);
-        assert queue.dequeue().get() == 3;
-        assert queue.dequeue().get() == 2;
-        assert queue.dequeue().get() == 1;
-        assert queue.peek().isEmpty();
+        assert queue.dequeue() == 3;
+        assert queue.dequeue() == 2;
+        assert queue.dequeue() == 1;
+        assert Objects.isNull(queue.peek());
         assert queue.isEmpty();
     }
 

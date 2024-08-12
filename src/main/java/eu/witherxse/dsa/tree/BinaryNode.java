@@ -1,4 +1,4 @@
-package eu.witherxse.dsa;
+package eu.witherxse.dsa.tree;
 
 import java.util.Objects;
 
@@ -8,7 +8,7 @@ import java.util.Objects;
  */
 public class BinaryNode<T> {
 
-    private final T value;
+    private T value;
     private BinaryNode<T> left;
     private BinaryNode<T> right;
 
@@ -38,5 +38,9 @@ public class BinaryNode<T> {
 
     public boolean isLeaf() {
         return Objects.isNull(this.left) && Objects.isNull(this.right);
+    }
+
+    void setValue(T value) {
+        this.value = value;
     }
 }
