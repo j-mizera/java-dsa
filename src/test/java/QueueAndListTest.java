@@ -16,7 +16,7 @@ public class QueueAndListTest {
         assert queue.dequeue() == 1;
         assert queue.dequeue() == 2;
         assert queue.dequeue() == 3;
-        assert Objects.nonNull(queue.peek());
+        assert Objects.isNull(queue.peek());
         assert queue.isEmpty();
     }
 
@@ -29,7 +29,7 @@ public class QueueAndListTest {
         assert queue.dequeue() == 3;
         assert queue.dequeue() == 2;
         assert queue.dequeue() == 1;
-        assert Objects.nonNull(queue.peek());
+        assert Objects.isNull(queue.peek());
         assert queue.isEmpty();
     }
 
