@@ -1,7 +1,12 @@
-package eu.witherxse.dsa;
+package eu.witherxse.dsa.queue;
 
 import java.util.Objects;
 
+/**
+ * LIFO queue implementation, also known as stack.
+ *
+ * @param <T>
+ */
 public class LIFOQueue<T> implements SimpleQueue<T> {
 
     private Node<T> head;

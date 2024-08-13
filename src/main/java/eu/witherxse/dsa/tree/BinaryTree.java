@@ -2,6 +2,11 @@ package eu.witherxse.dsa.tree;
 
 import java.util.Objects;
 
+/**
+ * Binary tree data structure.
+ *
+ * @param <T>
+ */
 public class BinaryTree<T extends Comparable<T>> {
 
     private BinaryNode<T> root;

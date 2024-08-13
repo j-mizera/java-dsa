@@ -1,6 +1,6 @@
-import eu.witherxse.dsa.LIFOQueue;
-import eu.witherxse.dsa.SimpleDoublyLinkedList;
-import eu.witherxse.dsa.SimpleQueue;
+import eu.witherxse.dsa.queue.LIFOQueue;
+import eu.witherxse.dsa.list.SimpleDoublyLinkedList;
+import eu.witherxse.dsa.queue.SimpleQueue;
 import org.junit.jupiter.api.Test;
 
 import java.util.Objects;

@@ -1,4 +1,4 @@
-package eu.witherxse.dsa;
+package eu.witherxse.dsa.list;
 
 /**
  * Simple list interface.
