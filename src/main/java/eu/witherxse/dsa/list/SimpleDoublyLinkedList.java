@@ -1,7 +1,8 @@
-package eu.witherxse.dsa;
+package eu.witherxse.dsa.list;
+
+import eu.witherxse.dsa.queue.SimpleQueue;
 
 import java.util.Objects;
-import java.util.Optional;
 
 /**
  * Simple doubly linked list implementation, may also be used as a FIFO queue.

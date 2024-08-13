@@ -1,5 +1,10 @@
 package eu.witherxse.dsa.heap;
 
+/**
+ * Min heap implementation.
+ *
+ * @param <T>
+ */
 public class MinHeap<T extends Comparable<T>> extends AbstractHeap<T> implements Heap<T> {
 
     @Override

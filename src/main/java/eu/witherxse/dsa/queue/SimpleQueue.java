@@ -1,6 +1,4 @@
-package eu.witherxse.dsa;
-
-import java.util.Optional;
+package eu.witherxse.dsa.queue;
 
 /**
  * Queue interface with simple linked queue implementation.

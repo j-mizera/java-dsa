@@ -1,5 +1,7 @@
 package eu.witherxse.dsa;
 
+import eu.witherxse.dsa.list.SimpleDoublyLinkedList;
+import eu.witherxse.dsa.queue.SimpleQueue;
 import eu.witherxse.dsa.tree.BinaryNode;
 
 import java.util.LinkedList;

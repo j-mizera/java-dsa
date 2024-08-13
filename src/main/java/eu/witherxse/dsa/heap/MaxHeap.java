@@ -1,5 +1,10 @@
 package eu.witherxse.dsa.heap;
 
+/**
+ * Max heap implementation.
+ *
+ * @param <T>
+ */
 public class MaxHeap<T extends Comparable<T>> extends AbstractHeap<T> implements Heap<T> {
 
     @Override

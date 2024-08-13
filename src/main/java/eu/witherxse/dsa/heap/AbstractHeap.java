@@ -2,10 +2,18 @@ package eu.witherxse.dsa.heap;
 
 import java.util.ArrayList;
 
+/**
+ * Abstract class for heap data structure.
+ * Contains common methods for max heap and min heap.
+ * The only difference between max heap and min heap is the way they compare elements so the heapify methods are abstract.
+ *
+ * @param <T>
+ */
 public abstract class AbstractHeap<T extends Comparable<T>> implements Heap<T> {
 
     protected int length;
-    protected ArrayList<T> data;
+    protected ArrayList<T> data; //just for the sake of simplicity, normally there would be an array and methods
+    // for adding and removing elements that copy array
 
     protected AbstractHeap() {
         this.length = 0;
